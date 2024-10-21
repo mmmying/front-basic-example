@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js原生操作dom</title>
+  </head>
+  <body>
+    <div id="parent" class="parent">
+      <div id="child1" class="child">
+        <!-- 这是注释 -->
+        <ul>
+          <li>苹果</li>
+          <li>香蕉</li>
+          <li>西瓜</li>
+        </ul>
+      </div>
+      <div id="child2" class="child">
+        <input type="text" />
+      </div>
+      <div id="child3" class="child">
+        <span>这是一段文字</span>
+      </div>
+    </div>
+
+    <script>
+      const dom1 = document.getElementById("child1");
+      console.log("getElementById", dom1);
+
+      const dom2 = document.getElementsByTagName("span");
+      console.log("getElementsByClassName", dom2, dom2[0]);
+
+      const dom3 = document.getElementsByClassName("child");
+      console.log("getElementsByClassName", dom3, dom3[0]);
+
+      const dom4 = document.querySelectorAll(".child");
+      console.log("querySelectorAll", dom4, dom4[0]);
+
+      console.log("parentNode", dom1.parentNode);
+
+      console.log("childNodes", dom1.childNodes);
+
+      console.log("Node.ELEMENT_NODE", Node.ELEMENT_NODE);
+      console.log("dom1 nodeType：", dom1.nodeType);
+
+    </script>
+  </body>
+</html>

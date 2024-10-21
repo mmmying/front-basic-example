@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水平垂直居中</title>
+  </head>
+  <body>
+    <div>
+      块元素水平居中，子元素设置 margin: 0 auto
+      <div style="height: 100px; width: 200px; background-color: antiquewhite">
+        <div style="height: 20px; width: 100px; background-color: aqua; margin: 0 auto"></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px">
+      块元素水平垂直居中，父元素设置为 flex 布局，display: flex; justify-content: center; align-items: center;
+      <div
+        style="
+          height: 100px;
+          width: 200px;
+          background-color: antiquewhite;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div style="height: 20px; width: 100px; background-color: aqua"></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px">
+      块元素水平垂直居中，子元素设置为绝对定位
+      <div style="height: 100px; width: 200px; background-color: antiquewhite; position: relative">
+        <div
+          style="
+            height: 20px;
+            width: 100px;
+            background-color: aqua;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px">
+      <div style="height: 100px; line-height: 100px; background-color: aquamarine; text-align: center">
+        这是一段水平垂直居中文本
+      </div>
+    </div>
+  </body>
+</html>

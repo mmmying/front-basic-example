@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在任意代码片段外部添加包装函数，可以将内部的变量和函数定义“隐 藏”起来，外部作用域无法访问包装函数内部的任何内容
+      // 虽然这种技术可以解决一些问题，但是它并不理想，因为会导致一些额外的问题。
+      // 首先，必须声明一个具名函数 foo()，意味着 foo 这个名称本身“污染”了所在作用域（在这个例子中是全局作用域）。
+      // 其次，必须显式地通过函数名（foo()）调用这个函数才能运行其中的代码。
+      function foo() {
+        console.log(111);
+      }
+      foo(); // 也可通过window.foo()调用
+
+      // 使用函数表达式
+      var a = 2;
+      (function foo2() {
+        // foo2作用域范围 ---start
+        var a = 3; 
+        console.log(a); // 3
+        console.log(foo2) // 可以访问到foo2，打印出foo2函数
+        // foo2作用域范围 ---end
+      })();
+      console.log(a); // 2
+      // foo2(); // foo2 is not defined
+    </script>
+  </body>
+</html>

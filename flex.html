@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .parent {
+        /* display: flex; */
+      }
+      .box {
+        /* border: 1px solid red; */
+        /* flex: 1; */
+        /* flex: 1 1 auto; */
+      }
+      /* .box1,
+      .box3 {
+        width: 200px;
+      }
+      .box2 {
+        flex: 1;
+      } */
+      .box1 {
+        width: 200px;
+        float: left;
+        background-color: red;
+      }
+      .box2 {
+        float: left;
+        width: calc(100% - 400px);
+        background-color: blue;
+      }
+      .box3 {
+        width: 200px; 
+        float: right;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box box1">这是第一个box</div>
+      <div class="box box2">这是第二个box</div>
+      <div class="box box3">这是第三个box</div>
+    </div>
+  </body>
+</html>

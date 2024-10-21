@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png" />
+    <style></style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <rect width="200" height="100" stroke="black" stroke-width="1" fill="blue" />
+    </svg>
+    <!-- rx 和 ry 属性可使矩形产生圆角 -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <rect x="50" y="40" width="200" height="100" rx="5" ry="5" stroke="black" stroke-width="1" fill="blue" />
+    </svg>
+    <!-- 如果省略cx和cy，圆的中心会被设置为(0, 0) -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <circle cx="150" cy="80" r="50" stroke="black" stroke-width="1" fill="red" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <ellipse cx="150" cy="80" rx="100" ry="50" style="fill: yellow; stroke: black; stroke-width: 1" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <line x1="0" y1="0" x2="200" y2="100" style="stroke: red; stroke-width: 2" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <line x1="0" y1="0" x2="100" y2="100" style="stroke: red; stroke-width: 2" />
+      <line x1="100" y1="100" x2="0" y2="100" style="stroke: red; stroke-width: 2" />
+      <line x1="0" y1="100" x2="0" y2="0" style="stroke: red; stroke-width: 2" />
+    </svg>
+    <svg height="210" width="200">
+      <polygon points="0,0 100,100 0,100" style="stroke: black; stroke-width: 1" />
+    </svg>
+    <svg height="210" width="200">
+      <polygon points="0,35 100,35 20,100 50,0 80,100" style="fill: white; stroke: black; stroke-width: 1" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="0,0 0,50 50,50 80,80" style="fill: none; stroke: black; stroke-width: 2" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <path d="M150 0 L75 150 L225 150 Z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+      </defs>
+      <text x="10" y="100" style="fill: black">
+        <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+      </text>
+    </svg>
+
+    <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+      <g>
+       <title>Layer 1</title>
+       <path transform="rotate(-127.101 434.513 240.469)" stroke="#000" id="svg_13" d="m414.57717,258.54143c-2.46081,-5.06152 -5.59048,-9.72427 -6.13886,-20.76169c-0.54838,-11.03742 14.07261,-43.08407 17.46064,-41.53226c1.10579,0.50649 -0.12225,9.7955 12.44046,33.25944c12.56271,23.46396 15.1297,22.33469 20.60051,31.95527c5.4708,9.62058 -3.28673,25.81648 -15.67368,22.94663c-12.38695,-2.86985 -14.10525,-5.67112 -18.58236,-10.18105c-4.47711,-4.50994 -7.64589,-10.62482 -10.1067,-15.68634z" stroke-width="2" fill="#000000"/>
+       <path id="svg_10" d="m407.6,216.2c-9.39227,0 -17,-9.8453 -17,-22c0,-12.1547 7.60773,-22 17,-22c9.39227,0 17,9.8453 17,22c0,12.1547 -7.60773,22 -17,22z" opacity="undefined" stroke-width="2" stroke="#000" fill="#000000"/>
+       <path id="svg_6" d="m295.6,216.2c-9.39227,0 -17,-9.8453 -17,-22c0,-12.1547 7.60773,-22 17,-22c9.39227,0 17,9.8453 17,22c0,12.1547 -7.60773,22 -17,22z" opacity="undefined" stroke-width="2" stroke="#000" fill="#000000"/>
+       <path transform="rotate(21.1924 259.479 291.123)" stroke="#000000" id="svg_11" d="m252.8374,321.68683c-8.30247,-3.31868 -11.11712,-14.66534 -9.76471,-23.66216c0.85279,-5.67318 15.70818,-39.31168 17.27943,-38.27867c0.51283,0.33716 2.69931,3.18288 8.52546,18.80238c5.82615,15.6195 6.77004,16.63197 7.29847,24.61191c0.52843,7.97995 -5.29524,19.55455 -15.88718,19.36127c-3.09088,-0.05641 -6.44404,-0.43203 -7.45147,-0.83472l0,0z" stroke-width="2" fill="#000000"/>
+       <path id="svg_3" d="m351.1,353.19999c-45.13259,0 -75.49999,-31.29005 -83.49999,-84.5c-8,-53.20994 28.3674,-98.5 83.49999,-99.5c55.13259,-1 89.49999,47.29005 83.49999,99.5c-6,52.20994 -38.3674,84.5 -83.49999,84.5z" opacity="undefined" stroke-width="2" stroke="#000" fill="#ffffff"/>
+       <path stroke="#ff0000" id="svg_14" d="m450.88191,216.24522c3.09216,-7.67846 15.20733,0 0,9.8723c-15.20733,-9.8723 -3.09216,-17.55076 0,-9.8723z" stroke-width="2" fill="#ff0000"/>
+       <path stroke="#000" id="svg_17" d="m308.60001,349.31112c0,-4.95079 4.62731,-9.11111 10.13381,-9.11111l10.13381,0c5.5065,0 7.84895,4.16032 7.84895,9.11111l0.36565,20.56933c3.9343,5.32693 -2.7081,11.31956 -8.2146,11.31956l-10.13381,0c-5.5065,0 -10.13381,-4.16032 -10.13381,-9.11111l0,-22.77778z" opacity="undefined" stroke-width="2" fill="#000000"/>
+       <path transform="rotate(-0.124609 378.17 360.747)" stroke="#000" id="svg_19" d="m364.16586,349.43805c0,-4.87301 1.75942,-8.86914 8.10668,-8.86914l11.68108,0c6.34726,0 9.04737,4.09496 9.04737,8.96797l0.42149,20.24618c0.1729,6.77072 -3.1216,11.14172 -9.46886,11.14172l-11.68108,0c-6.34726,0 -11.94357,-6.07442 -8.10164,-11.33502l-0.00504,-20.15171z" opacity="undefined" stroke-width="2" fill="#000000"/>
+      </g>
+     </svg>
+  </body>
+</html>

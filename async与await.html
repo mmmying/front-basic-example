@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sleep(second) {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            console.log(Math.random());
+            resolve();
+          }, second);
+        });
+      }
+
+      async function f1() {
+        await sleep(2000); // 每隔两秒打印
+        await sleep(2000);
+        await sleep(2000);
+      }
+
+      async function f2() {
+        let tasks = [];
+        for (let i = 0; i < 3; i++) {
+          tasks.push(sleep(2000));
+        }
+        await Promise.all(tasks); // 同时打印，Promise.all并发
+      }
+
+      //   f1();
+      f2();
+    </script>
+  </body>
+</html>

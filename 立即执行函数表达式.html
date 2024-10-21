@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 1;
+      (function foo(global) {
+        var a = 2;
+        console.log(a, global.a); // 2,1
+      })(window);
+
+      //   倒置代码的运行顺序
+      //   函数表达式def传入IIFE的参数def，参数def（即传入的函数）被调用，window传入global参数
+      var b = 2;
+      (function IIFE(def) {
+        def(window);
+      })(function def(global) {
+        var b = 3;
+        console.log(b, global.b); // 3,2
+      });
+    </script>
+  </body>
+</html>
